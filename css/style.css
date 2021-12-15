@@ -1,0 +1,177 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+*{
+    margin: 0;
+    padding:0;
+    border:0;
+    /* outline: 0; */
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('../images/wild_flowers.png');/*avec ou sans guillement*/
+}
+
+header{
+    font-family: 'Bonheur Royale', cursive;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;/* Comme on veut avoir un menu burger ds la page, on va gérer des éléments en position absolue (ctd flottant au dessus de la page, comme des calques) on demande au header d'être en position relative pour que ses enfants en position absolute se positionne par rapport au header et non pas par rapport à la fenêtre du navigateur */
+}
+
+#bt-burger{
+    background: rgb(1,82,1);
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    /* la positiion absolue rend l'objet flottant au dessus du contenu de la page */
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top:50%;
+    transform: translateY(-50%);
+    padding: 5px;
+}
+#bt-burger div{
+    background: white;
+    height: 5px;
+    margin: 2px 3px;
+
+}
+#nav-principale{
+    background: rgb(1,82,1);
+    display: none;/*ma barre disparaît puis aller ds media query*/
+}
+
+#nav-principale ul li{
+    display: inline;
+
+}
+a.lien-principal:link, a.lien-principal:visited{
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+a.lien-principal:hover, a.lien-principal:active{
+    background: yellowgreen;
+}
+
+.container{
+    width: calc(100% - 30px);/*espace important, 30px car padding 15px*/
+    max-width: 1140px;
+    padding: 0 15px;
+    background-color: white;
+    margin: 0 auto;/*moitié à gauche, moitié à droite*/
+}
+h1{
+    padding: 15px 0;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.width1{
+    width:100%;
+}
+
+.width2{
+    display: none;
+}
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+  }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header{
+        text-align: left;
+    }
+    #nav-principale{
+        display: block;
+    }
+    #bt-burger{
+        display: none;/*mon burger apparait sur les écrans à partir de 992px*/
+    }
+    h1{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+    .width1{
+        width:20%;
+    }
+    .width2{
+        display: block;
+        width: 50%;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    header{
+        text-align: left;
+    }
+    #bt-burger{
+        display: none;
+    }
+    h1{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+    .width1{
+        width:20%;
+    }
+    .width2{
+        display: block;
+        width: 50%;
+    }
+  }
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    header{
+        text-align: left;
+    }
+    #bt-burger{
+        display: none;
+    }
+    h1{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+    .width1{
+        width:20%;
+    }
+    .width2{
+        display: block;
+        width: 50%;
+    }
+  }
